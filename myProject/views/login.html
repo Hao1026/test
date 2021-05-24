@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.33,minimum-scale=1.0,maximum-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="renderer" content="webkit">
+        <title>会员登录-演示网站</title>
+        <meta http-equiv="Content-Language" content="zh-CN">
+        <link rel="stylesheet" rev="stylesheet" href="/stylesheets/fonts/iconfont.css" type="text/css" media="all">
+        <link rel="stylesheet" rev="stylesheet" href="/stylesheets/txcstx.css" type="text/css" media="all">
+        <style> body{color:#;}a{color:#;}a:hover{color:#;}.bg-black{background-color:#;}.tx-login-bg{background:url(/images/bg.jpg) no-repeat 0 0;}</style>
+    </head>
+    <body class="tx-login-bg">
+       <form action="/login" method="POST">
+        <div class="tx-login-box">
+            <div class="login-avatar bg-black"><i class="iconfont icon-wode"></i></div>
+				<ul class="tx-form-li row">
+					<li class="col-24 col-m-24"><p><input type="text" id="edtUserName" name="name" placeholder="账号" class="tx-input"><i></i></p></li>
+					<li class="col-24 col-m-24"><p><input type="password" id="edtPassWord" name="pwd" placeholder="密码" class="tx-input"><i></i></p></li>
+					<li class="col-24 col-m-24"><p class="tx-input-full"><button type="submit" class="tx-btn tx-btn-big bg-black">登录</button></p></li>
+					<li class="col-12 col-m-12"><p><a href="register" class="f-12 f-gray">新用户注册</a></p></li>
+					<li class="col-12 col-m-12"><p class="ta-r"><a href="resetpwd" class="f-12 f-gray">忘记密码</a></p></li>
+				</ul>
+            </div>
+       </form>
+    </body>
+</html>
