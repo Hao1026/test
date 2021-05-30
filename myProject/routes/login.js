@@ -22,7 +22,7 @@ router.post('/login',function(req,res){
     var query1 = "select * from t_user where userName='"+name+"' and password='"+pwd+"'"
     connection.query(query1,function(err,result){
         if (err) throw err;
-        console.log("!!!",result)
+        console.log(result)
         if(result.length==0){
             res.send("用户名或密码错误")
         }else{

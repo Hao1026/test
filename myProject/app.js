@@ -6,6 +6,10 @@ var logger = require('morgan');
 var ejs = require('ejs');
 
 var loginRouter = require('./routes/login');
+var adminRouter = require('./routes/admin');
+var designRouter = require('./routes/design');
+var insertRouter = require('./routes/insert');
+var userRouter = require('./routes/user');
 var indexRouter = require('./routes/index');
 var homeRouter = require('./routes/home');
 var aboutRouter = require('./routes/about');
@@ -27,6 +31,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/',loginRouter);
+app.use('/',adminRouter);
+app.use('/',designRouter);
+app.use('/',insertRouter);
+app.use('/',userRouter);
 app.use('/', indexRouter);
 app.use('/',homeRouter);
 app.use('/', aboutRouter);
@@ -44,7 +52,7 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
+  
   // render the error page
   res.status(err.status || 500);
   res.render('error');
